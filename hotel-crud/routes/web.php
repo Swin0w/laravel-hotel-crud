@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'TestController@employees')
+    -> name('employees');
+Route::get('/detail/{id}', 'TestController@detail')
+    -> name('detail');
+Route::post('/create')
