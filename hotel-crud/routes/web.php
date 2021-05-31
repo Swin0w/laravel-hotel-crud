@@ -17,4 +17,11 @@ Route::get('/', 'TestController@employees')
     -> name('employees');
 Route::get('/detail/{id}', 'TestController@detail')
     -> name('detail');
-Route::post('/create')
+Route::get('/create/employees', 'TestController@create')
+    -> name('new');
+Route::post('/store/employees', 'TestController@create')
+    -> name('new');
+Route::get('/destroy/{id}', 'TestController@destroy')
+    -> name('destroy');
+Route::get('/edit/employees/{id}', 'TestController@edit')
+    -> name('edit');
